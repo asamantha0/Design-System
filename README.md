@@ -53,8 +53,8 @@ The documentation website includes:
      
 # Responsive Design
 The site is designed to adapt to different screen sizes:
-   *Collapsible sidebar on mobile devices.
-   *Component grids that automatically adjust to the available space.
+   * Collapsible sidebar on mobile devices.
+   * Component grids that automatically adjust to the available space.
    
 <hr>
 
