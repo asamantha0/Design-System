@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h1 class="sidebar-title">Design System</h1>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#tokens" class="nav-link active" data-page="tokens">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 2L2 7L10 12L18 7L10 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M2 13L10 18L18 13" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <span>Tokens</span>
+            </a>
+            <a href="#colors" class="nav-link" data-page="colors">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"/>
+                    <path d="M10 3V10L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Colores</span>
+            </a>
+            <a href="#typography" class="nav-link" data-page="typography">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M4 4H16M10 4V16M7 16H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Tipografía</span>
+            </a>
+            <a href="#components" class="nav-link" data-page="components">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="3" y="3" width="6" height="6" stroke="currentColor" stroke-width="2"/>
+                    <rect x="11" y="3" width="6" height="6" stroke="currentColor" stroke-width="2"/>
+                    <rect x="3" y="11" width="6" height="6" stroke="currentColor" stroke-width="2"/>
+                    <rect x="11" y="11" width="6" height="6" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Componentes</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Tokens Page -->
+        <div id="tokens-page" class="page active">
+            <header class="page-header">
+                <h1>Design Tokens</h1>
+                <p>Todos los tokens de diseño de nuestro sistema</p>
+            </header>
+
+            <section class="token-section">
+                <h2>Colores</h2>
+                <div id="color-tokens" class="token-grid"></div>
+            </section>
+
+            <section class="token-section">
+                <h2>Espaciado</h2>
+                <div id="spacing-tokens" class="token-grid"></div>
+            </section>
+
+            <section class="token-section">
+                <h2>Tipografía</h2>
+                <div id="typography-tokens" class="token-grid"></div>
+            </section>
+        </div>
+
+        <!-- Colors Page -->
+        <div id="colors-page" class="page">
+            <header class="page-header">
+                <h1>Librería de Colores</h1>
+                <p>Paleta de colores completa del sistema</p>
+            </header>
+
+            <section class="color-section">
+                <h2>Colores Primarios</h2>
+                <div id="primary-colors" class="color-palette"></div>
+            </section>
+
+            <section class="color-section">
+                <h2>Colores Neutrales</h2>
+                <div id="neutral-colors" class="color-palette"></div>
+            </section>
+
+            <section class="color-section">
+                <h2>Colores de Estado</h2>
+                <div class="color-grid">
+                    <div>
+                        <h3>Success</h3>
+                        <div id="success-colors" class="color-palette"></div>
+                    </div>
+                    <div>
+                        <h3>Warning</h3>
+                        <div id="warning-colors" class="color-palette"></div>
+                    </div>
+                    <div>
+                        <h3>Error</h3>
+                        <div id="error-colors" class="color-palette"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Typography Page -->
+        <div id="typography-page" class="page">
+            <header class="page-header">
+                <h1>Tipografía</h1>
+                <p>Estilos de texto del sistema</p>
+            </header>
+
+            <section class="typography-section">
+                <h2>Headings</h2>
+                <div class="typography-showcase">
+                    <div class="typography-item">
+                        <h1 class="heading-1">Heading 1</h1>
+                        <p class="typography-meta">Inter Bold, 64px / 76px</p>
+                    </div>
+                    <div class="typography-item">
+                        <h2 class="heading-2">Heading 2</h2>
+                        <p class="typography-meta">Inter Bold, 52px / 64px</p>
+                    </div>
+                    <div class="typography-item">
+                        <h3 class="heading-3">Heading 3</h3>
+                        <p class="typography-meta">Inter Semi Bold, 40px / 48px</p>
+                    </div>
+                    <div class="typography-item">
+                        <h4 class="heading-4">Heading 4</h4>
+                        <p class="typography-meta">Inter Semi Bold, 32px / 40px</p>
+                    </div>
+                    <div class="typography-item">
+                        <h5 class="heading-5">Heading 5</h5>
+                        <p class="typography-meta">Inter Semi Bold, 24px / 32px</p>
+                    </div>
+                    <div class="typography-item">
+                        <h6 class="heading-6">Heading 6</h6>
+                        <p class="typography-meta">Inter Semi Bold, 18px / 24px</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="typography-section">
+                <h2>Body Text</h2>
+                <div class="typography-showcase">
+                    <div class="typography-item">
+                        <p class="body-lg">Body Large - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="typography-meta">Inter Regular, 18px / 28px</p>
+                    </div>
+                    <div class="typography-item">
+                        <p class="body-md">Body Medium - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="typography-meta">Inter Regular, 16px / 24px</p>
+                    </div>
+                    <div class="typography-item">
+                        <p class="body-sm">Body Small - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="typography-meta">Inter Regular, 14px / 20px</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Components Page -->
+        <div id="components-page" class="page">
+            <header class="page-header">
+                <h1>Componentes</h1>
+                <p>Componentes SaaS basados en nuestro design system</p>
+            </header>
+
+            <!-- Buttons -->
+            <section class="component-section">
+                <h2>Buttons</h2>
+                <div class="component-demo">
+                    <button class="btn btn-primary">Primary Button</button>
+                    <button class="btn btn-secondary">Secondary Button</button>
+                    <button class="btn btn-primary" disabled>Disabled Button</button>
+                </div>
+                <div class="component-code">
+                    <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                    <pre><code>&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary Button&lt;/button&gt;
+&lt;button class="btn btn-primary" disabled&gt;Disabled Button&lt;/button&gt;</code></pre>
+                </div>
+            </section>
+
+            <!-- Input Fields -->
+            <section class="component-section">
+                <h2>Input Fields</h2>
+                <div class="component-demo">
+                    <div class="form-group">
+                        <label for="input-text">Text Input</label>
+                        <input type="text" id="input-text" class="input" placeholder="Enter text...">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-email">Email Input</label>
+                        <input type="email" id="input-email" class="input" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-error">Input with Error</label>
+                        <input type="text" id="input-error" class="input input-error" placeholder="Invalid input">
+                        <span class="input-message error">This field is required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-success">Input with Success</label>
+                        <input type="text" id="input-success" class="input input-success" value="Valid input">
+                        <span class="input-message success">Looks good!</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards -->
+            <section class="component-section">
+                <h2>Cards</h2>
+                <div class="component-demo card-grid">
+                    <div class="card">
+                        <h3>Basic Card</h3>
+                        <p>This is a basic card component with title and description.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Card with Header</h3>
+                            <span class="badge">New</span>
+                        </div>
+                        <p>Card with a header section and badge.</p>
+                        <div class="card-footer">
+                            <button class="btn btn-secondary btn-sm">Action</button>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-label">Total Users</div>
+                        <div class="stat-value">12,543</div>
+                        <div class="stat-change positive">+12.5%</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alerts -->
+            <section class="component-section">
+                <h2>Alerts</h2>
+                <div class="component-demo">
+                    <div class="alert alert-info">
+                        <strong>Info:</strong> This is an informational message.
+                    </div>
+                    <div class="alert alert-success">
+                        <strong>Success:</strong> Your changes have been saved successfully.
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Warning:</strong> Please review your input before submitting.
+                    </div>
+                    <div class="alert alert-error">
+                        <strong>Error:</strong> Something went wrong. Please try again.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tables -->
+            <section class="component-section">
+                <h2>Tables</h2>
+                <div class="component-demo">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>Admin</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td>User</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Bob Johnson</td>
+                                <td>bob@example.com</td>
+                                <td>User</td>
+                                <td><span class="badge badge-warning">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Forms -->
+            <section class="component-section">
+                <h2>Complete Form</h2>
+                <div class="component-demo">
+                    <form class="form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" class="input" placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" class="input" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="input" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="input" rows="4" placeholder="Your message..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
